@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sekkii – Support</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f9f9f9;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    header .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f56b60, #e8432e);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    header h1 { font-size: 28px; font-weight: 700; }
+    header p { color: #666; margin-top: 8px; }
+    nav {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    nav a {
+      color: #e8432e;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    nav a:hover { text-decoration: underline; }
+    section { margin-bottom: 32px; }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e8432e;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 16px 0 8px;
+    }
+    p { margin-bottom: 12px; color: #333; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 8px; color: #333; }
+    a { color: #e8432e; }
+    .lang-toggle {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      margin-bottom: 24px;
+    }
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+      font-size: 13px;
+      color: #555;
+    }
+    .lang-btn.active {
+      background: #e8432e;
+      color: #fff;
+      border-color: #e8432e;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { color: #1a1a1a; }
+    .contact-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="app-icon">✦</div>
+    <h1>Sekkii</h1>
+    <p>Support / 技术支持</p>
+    <nav>
+      <a href="index.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <div class="lang-toggle">
+    <button class="lang-btn" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn active" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- English -->
+  <div class="lang-section active" id="lang-en">
+    <section>
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>How does voice input work?</h3>
+        <p>Hold the microphone button and speak. Sekkii uses Apple's on-device speech recognition to transcribe your voice, then AI automatically categorizes it as a todo or a note.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does Sekkii work offline?</h3>
+        <p>Voice recording and basic speech recognition work offline. AI-powered intent parsing (smart categorization, date extraction) requires an internet connection.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I set up reminders?</h3>
+        <p>Just say it naturally — for example, "remind me to call mom at 3pm tomorrow." AI will automatically set the reminder time. You can also manually edit reminders by tapping on any todo.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I switch languages?</h3>
+        <p>Go to Settings and tap the language option. Sekkii supports English and Chinese, and you can switch anytime without restarting the app.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I cancel my subscription?</h3>
+        <p>Open the iOS Settings app → tap your Apple ID → Subscriptions → Sekkii → Cancel Subscription. Your Pro features remain active until the end of the billing period.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I delete my account?</h3>
+        <p>Go to Sekkii Settings → tap your profile → Delete Account. All your data will be permanently removed from our servers within 30 days.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <div class="contact-card">
+        <p>If you need help or have feedback, please reach out:</p>
+        <p><strong>Email:</strong> <a href="mailto:hello.sekkii@gmail.com">hello.sekkii@gmail.com</a></p>
+        <p>We typically respond within 24 hours.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- 中文 -->
+  <div class="lang-section" id="lang-zh">
+    <section>
+      <h2>常见问题</h2>
+
+      <div class="faq-item">
+        <h3>语音输入如何工作？</h3>
+        <p>按住麦克风按钮说话，Sekkii 使用 Apple 设备端语音识别将语音转为文字，然后 AI 自动将内容分类为待办或笔记。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Sekkii 能离线使用吗？</h3>
+        <p>语音录制和基本语音识别可以离线工作。AI 智能解析（自动分类、时间提取）需要网络连接。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>如何设置提醒？</h3>
+        <p>用自然语言说出来即可——例如"明天下午3点提醒我打电话给妈妈"，AI 会自动设置提醒时间。你也可以点击任何待办手动编辑提醒。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>如何切换语言？</h3>
+        <p>进入设置，点击语言选项。Sekkii 支持中文和英文，切换后无需重启应用。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>如何取消订阅？</h3>
+        <p>打开 iOS 设置 → 点击你的 Apple ID → 订阅 → Sekkii → 取消订阅。Pro 功能在当前计费周期结束前仍可使用。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>如何删除账户？</h3>
+        <p>进入 Sekkii 设置 → 点击你的头像 → 删除账户。你的所有数据将在 30 天内从服务器永久删除。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>联系我们</h2>
+      <div class="contact-card">
+        <p>如需帮助或有反馈意见，请联系我们：</p>
+        <p><strong>邮箱：</strong><a href="mailto:hello.sekkii@gmail.com">hello.sekkii@gmail.com</a></p>
+        <p>我们通常在 24 小时内回复。</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Sekkii. All rights reserved.</p>
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
